@@ -49,22 +49,48 @@
 
 
 
-# if/else
+# # if/else
 # print("Welcome to the rollercoaster!")
 
 # height = int(input("What is your height in cm?"))
 
-# if height == 120:
-#     print("You can ride the rollercoaster!")
+# if height >= 120:
+#     age = int(input("What is your age?"))
+#     if age >= 18:
+#         print("Please pay $12")
+#     elif age >= 12:
+#         print("Please pay $8")
+#     else:
+#         print("Please pay $5")
 # else:
 #     print("Sorry, you can't ride it!")
 
 
 
 # Odd or Even
-number = int(input("Choose a whole number"))
+# number = int(input("Choose a whole number"))
 
-if number % 2 != 0:
-    print("This is an odd number.")
+# if number % 2 != 0:
+#     print("This is an odd number.")
+# else:
+#     print("This is an even number.")
+
+
+
+# BMI Calculator
+height = float(input("What is your height in meters"))
+
+weight = int(input("What is your weight in pounds?"))
+
+bmi = weight / (height * height)
+
+if bmi < 18.5:
+  print(f"Your BMI is {bmi}, you are underweight.")
+elif bmi < 25:
+  print(f"Your BMI is {bmi}, you have a normal weight.")
+elif bmi < 30:
+  print(f"Your BMI is {bmi}, you are slightly overweight.")
+elif bmi < 35:
+  print(f"Your BMI is {bmi}, you are obese.")
 else:
-    print("This is an even number.")
+  print(f"Your BMI is {bmi}, you are clinically obese.")
