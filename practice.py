@@ -28,20 +28,33 @@
 
 
 # Tip Calculator
-print("Welcome to the tip calculator.")
+# print("Welcome to the tip calculator.")
 
-bill_total_without_tip = input("What was the total bill? $")
+# bill_total_without_tip = input("What was the total bill? $")
 
-tip_size = input("What percentage tip would you like to give? 15, 20, or 25?")
+# tip_size = input("What percentage tip would you like to give? 15, 20, or 25?")
 
-people_to_split_the_bill = input("How many people to split the bill?")
+# people_to_split_the_bill = input("How many people to split the bill?")
 
-bill_total_with_tip = float(bill_total_without_tip) + (float(bill_total_without_tip) * (int(tip_size) / 100))
+# bill_total_with_tip = float(bill_total_without_tip) + (float(bill_total_without_tip) * (int(tip_size) / 100))
 
-print(bill_total_with_tip)
+# print(bill_total_with_tip)
 
-cost_per_person = bill_total_with_tip / int(people_to_split_the_bill)
+# cost_per_person = bill_total_with_tip / int(people_to_split_the_bill)
 
-cost_per_person = round(cost_per_person, 2)
+# cost_per_person = round(cost_per_person, 2)
 
-print(f"Each person should pay: ${cost_per_person}")
+# print(f"Each person should pay: ${cost_per_person}")
+
+
+
+
+# if/else
+print("Welcome to the rollercoaster!")
+
+height = int(input("What is your height in cm?"))
+
+if height > 120:
+    print("You can ride the rollercoaster!")
+else:
+    print("Sorry, you can't ride it!")
