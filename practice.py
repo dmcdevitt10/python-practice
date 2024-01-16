@@ -50,11 +50,21 @@
 
 
 # if/else
-print("Welcome to the rollercoaster!")
+# print("Welcome to the rollercoaster!")
 
-height = int(input("What is your height in cm?"))
+# height = int(input("What is your height in cm?"))
 
-if height > 120:
-    print("You can ride the rollercoaster!")
+# if height == 120:
+#     print("You can ride the rollercoaster!")
+# else:
+#     print("Sorry, you can't ride it!")
+
+
+
+# Odd or Even
+number = int(input("Choose a whole number"))
+
+if number % 2 != 0:
+    print("This is an odd number.")
 else:
-    print("Sorry, you can't ride it!")
+    print("This is an even number.")
