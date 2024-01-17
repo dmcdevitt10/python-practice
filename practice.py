@@ -63,6 +63,8 @@
 #     elif age >= 12:
 #         print("Youth tickets are $8")
 #         bill = 8
+#     elif age >= 45 and age <= 55:
+#         print("You ride for free!")
 #     else:
 #         print("Child tickets are $5")
 #         bill = 5
@@ -111,7 +113,7 @@
 
 
 
-# Pizza Order
+# Pizza Order 
 # print("Thank you for choosing Python Pizza Deliveries!")
 
 # bill = 0
@@ -138,3 +140,44 @@
 #     bill +1
 
 # print(f"Your final bill is: ${bill}.")
+
+
+
+
+# Love calculator
+print("The Love Calculator is calculating your score...")
+name1 = input("What is your name?")
+name2 = input("What is their name?")
+
+names = name1 + name2
+
+lower_case_names = names.lower()
+
+t = lower_case_names.count("t")
+r = lower_case_names.count("r")
+u = lower_case_names.count("u")
+e = lower_case_names.count("e")
+l = lower_case_names.count("l")
+o = lower_case_names.count("o")
+v = lower_case_names.count("v")
+e = lower_case_names.count("e")
+
+true = t + r + u + e
+love = l + o + v + e
+
+
+str_score = str(true) + str(love)
+
+score = int(str_score)
+
+message = f"Your score is {true}{love}, "
+
+if score < 10 or score > 90:
+  message += "you go together like coke and mentos."
+elif score >= 40 and score <= 50:
+  message += "you are alright together."
+else:
+  message = f"Your score is {score}."
+
+
+print(message)
