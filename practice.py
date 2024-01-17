@@ -170,7 +170,7 @@ str_score = str(true) + str(love)
 
 score = int(str_score)
 
-message = f"Your score is {true}{love}, "
+message = f"Your score is {score}, "
 
 if score < 10 or score > 90:
   message += "you go together like coke and mentos."
