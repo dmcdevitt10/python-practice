@@ -50,20 +50,32 @@
 
 
 # # if/else
-# print("Welcome to the rollercoaster!")
+print("Welcome to the rollercoaster!")
 
-# height = int(input("What is your height in cm?"))
+height = int(input("What is your height in cm?"))
+bill = 0
 
-# if height >= 120:
-#     age = int(input("What is your age?"))
-#     if age >= 18:
-#         print("Please pay $12")
-#     elif age >= 12:
-#         print("Please pay $8")
-#     else:
-#         print("Please pay $5")
-# else:
-#     print("Sorry, you can't ride it!")
+if height >= 120:
+    age = int(input("What is your age?"))
+    if age >= 18:
+        print("Adult tickets are $12")
+        bill = 12
+    elif age >= 12:
+        print("Youth tickets are $8")
+        bill = 8
+    else:
+        print("Child tickets are $5")
+        bill = 5
+
+    wants_photo = input("Do you want a photo taken? Y or N")
+
+    if wants_photo == "Y":
+        bill += 3
+
+    print(f"You final bill is {bill}")
+
+else:
+    print("Sorry, you can't ride it!")
 
 
 
@@ -78,19 +90,19 @@
 
 
 # BMI Calculator
-height = float(input("What is your height in meters"))
+# height = float(input("What is your height in meters"))
 
-weight = int(input("What is your weight in pounds?"))
+# weight = int(input("What is your weight in pounds?"))
 
-bmi = weight / (height * height)
+# bmi = weight / (height * height)
 
-if bmi < 18.5:
-  print(f"Your BMI is {bmi}, you are underweight.")
-elif bmi < 25:
-  print(f"Your BMI is {bmi}, you have a normal weight.")
-elif bmi < 30:
-  print(f"Your BMI is {bmi}, you are slightly overweight.")
-elif bmi < 35:
-  print(f"Your BMI is {bmi}, you are obese.")
-else:
-  print(f"Your BMI is {bmi}, you are clinically obese.")
+# if bmi < 18.5:
+#   print(f"Your BMI is {bmi}, you are underweight.")
+# elif bmi < 25:
+#   print(f"Your BMI is {bmi}, you have a normal weight.")
+# elif bmi < 30:
+#   print(f"Your BMI is {bmi}, you are slightly overweight.")
+# elif bmi < 35:
+#   print(f"Your BMI is {bmi}, you are obese.")
+# else:
+#   print(f"Your BMI is {bmi}, you are clinically obese.")
