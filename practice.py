@@ -225,28 +225,101 @@
 
 
 # X marks the spot: nested lists and changing values
-line1 = [" ","️ ","️ "]
-line2 = [" "," ","️ "]
-line3 = [" "," "," "]
-map = [line1, line2, line3]
-print("Hiding your treasure! X marks the spot.")
-position = input("Where do you want the treasure? A1 - C3\n")
+# line1 = [" ","️ ","️ "]
+# line2 = [" "," ","️ "]
+# line3 = [" "," "," "]
+# map = [line1, line2, line3]
+# print("Hiding your treasure! X marks the spot.")
+# position = input("Where do you want the treasure? A1 - C3\n")
 
-column = 0
+# column = 0
 
-if position[0] == "A":
-  column = 0
-elif position[0] == "B":
-  column = 1
-else:
-  column = 2
+# if position[0] == "A":
+#   column = 0
+# elif position[0] == "B":
+#   column = 1
+# else:
+#   column = 2
 
-if position[1] == "1":
-  map[0][column] = "X"
-elif position[1] == "2":
-  map[1][column] = "X"
-else:
-  map[2][column] = "X"
+# if position[1] == "1":
+#   map[0][column] = "X"
+# elif position[1] == "2":
+#   map[1][column] = "X"
+# else:
+#   map[2][column] = "X"
 
 
-print(map)
+# print(map)
+
+
+
+
+# rock paper scissors
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+options = ["rock", "paper", "scissors"]
+
+players_choice = options[int(input("What do you choose? Type 0 for rock, 1 for paper or 2 for scissors\n"))]
+
+computers_choice = options[random.randint(0,2)]
+
+if players_choice == "rock":
+    print(f"You chose\n{rock}")
+    if computers_choice == "rock":
+        print(f"Computer chose\n{rock}")
+        print("Draw")
+    if computers_choice == "paper":
+        print(f"Computer chose\n{paper}")
+        print("You lose")
+    if computers_choice == "scissors":
+        print(f"Computer chose\n{scissors}")
+        print("You Win")
+elif players_choice == "paper":
+    print(f"You chose\n{paper}")
+    if computers_choice == "paper":
+        print(f"Computer chose\n{paper}")
+        print("Draw")
+    if computers_choice == "scissors":
+        print(f"Computer chose\n{scissors}")
+        print("You lose")
+    if computers_choice == "rock":
+        print(f"Computer chose\n{rock}")
+        print("You Win")
+elif players_choice == "scissors":
+    print(f"You chose\n{scissors}")
+    if computers_choice == "scissors":
+        print(f"Computer chose\n{scissors}")
+        print("Draw")
+    if computers_choice == "rock":
+        print(f"Computer chose\n{rock}")
+        print("You lose")
+    if computers_choice == "paper":
+        print(f"Computer chose\n{paper}")
+        print("You Win")
