@@ -145,39 +145,50 @@
 
 
 # Love calculator
-print("The Love Calculator is calculating your score...")
-name1 = input("What is your name?")
-name2 = input("What is their name?")
+# print("The Love Calculator is calculating your score...")
+# name1 = input("What is your name?")
+# name2 = input("What is their name?")
 
-names = name1 + name2
+# names = name1 + name2
 
-lower_case_names = names.lower()
+# lower_case_names = names.lower()
 
-t = lower_case_names.count("t")
-r = lower_case_names.count("r")
-u = lower_case_names.count("u")
-e = lower_case_names.count("e")
-l = lower_case_names.count("l")
-o = lower_case_names.count("o")
-v = lower_case_names.count("v")
-e = lower_case_names.count("e")
+# t = lower_case_names.count("t")
+# r = lower_case_names.count("r")
+# u = lower_case_names.count("u")
+# e = lower_case_names.count("e")
+# l = lower_case_names.count("l")
+# o = lower_case_names.count("o")
+# v = lower_case_names.count("v")
+# e = lower_case_names.count("e")
 
-true = t + r + u + e
-love = l + o + v + e
-
-
-str_score = str(true) + str(love)
-
-score = int(str_score)
-
-message = f"Your score is {score}, "
-
-if score < 10 or score > 90:
-  message += "you go together like coke and mentos."
-elif score >= 40 and score <= 50:
-  message += "you are alright together."
-else:
-  message = f"Your score is {score}."
+# true = t + r + u + e
+# love = l + o + v + e
 
 
-print(message)
+# str_score = str(true) + str(love)
+
+# score = int(str_score)
+
+# message = f"Your score is {score}, "
+
+# if score < 10 or score > 90:
+#   message += "you go together like coke and mentos."
+# elif score >= 40 and score <= 50:
+#   message += "you are alright together."
+# else:
+#   message = f"Your score is {score}."
+
+
+# print(message)
+
+
+
+
+# random numbers
+import random
+import new_module
+
+random_float = random.random() * 5
+
+print(random.randint(0,1))
