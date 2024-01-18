@@ -186,9 +186,21 @@
 
 
 # random numbers
-import random
-import new_module
+# import random
+# import new_module
 
-random_float = random.random() * 5
+# random_float = random.random() * 5
 
-print(random.randint(0,1))
+# print(random.randint(0,1))
+
+
+
+# appending and extending lists
+states_of_america = ["delaware", "utah", "idaho"]
+
+states_of_america[1] = "Hawaii"
+
+states_of_america.append("Florida")
+states_of_america.extend(["cali", "new york"])
+
+print(states_of_america)
