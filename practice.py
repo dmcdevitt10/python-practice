@@ -208,14 +208,45 @@
 
 
 #random name/string from a list
-import random
+# import random
 
-names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
+# names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
 
-number_of_people = len(names) - 1
+# number_of_people = len(names) - 1
 
-random_person = random.randint(0, number_of_people)
+# random_person = random.randint(0, number_of_people)
 
-person_to_pay = names[random_person]
+# person_to_pay = names[random_person]
 
-print(f"{person_to_pay} is going to buy the meal today!")
+# print(f"{person_to_pay} is going to buy the meal today!")
+
+
+
+
+
+# X marks the spot: nested lists and changing values
+line1 = [" ","️ ","️ "]
+line2 = [" "," ","️ "]
+line3 = [" "," "," "]
+map = [line1, line2, line3]
+print("Hiding your treasure! X marks the spot.")
+position = input("Where do you want the treasure? A1 - C3\n")
+
+column = 0
+
+if position[0] == "A":
+  column = 0
+elif position[0] == "B":
+  column = 1
+else:
+  column = 2
+
+if position[1] == "1":
+  map[0][column] = "X"
+elif position[1] == "2":
+  map[1][column] = "X"
+else:
+  map[2][column] = "X"
+
+
+print(map)
