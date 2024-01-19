@@ -329,12 +329,34 @@
 
 
 # for loops - finding the highest number
-numbers = [13, 78, 34, 69, 16, 62]
+# numbers = [13, 78, 34, 69, 16, 62]
 
-highest_number = 0
+# highest_number = 0
 
-for number in numbers:
-    if number > highest_number:
-        highest_number = number
+# for number in numbers:
+#     if number > highest_number:
+#         highest_number = number
 
-print(f"The highest number is {highest_number}")
+# print(f"The highest number is {highest_number}")
+
+
+# total = 0
+
+# for number in range(1,101):
+#     total += number
+
+# print(total)
+
+
+
+
+# FizzBuzz
+for number in range(1, 101):
+  if number % 3 == 0 and number % 5 == 0:
+    print("FizzBuzz")
+  elif number % 3 == 0:
+    print("Fizz")
+  elif number % 5 == 0:
+    print("Buzz")
+  else:
+    print(number)
