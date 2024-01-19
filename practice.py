@@ -365,63 +365,72 @@
 
 
 # Password generator
-import random
+# import random
 
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+# numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+# symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-print("Welcome to the PyPassword Generator!")
-num_of_letters= int(input("How many letters would you like in your password?\n")) 
-num_of_symbols = int(input(f"How many symbols would you like?\n"))
-num_of_numbers = int(input(f"How many numbers would you like?\n"))
+# print("Welcome to the PyPassword Generator!")
+# num_of_letters= int(input("How many letters would you like in your password?\n")) 
+# num_of_symbols = int(input(f"How many symbols would you like?\n"))
+# num_of_numbers = int(input(f"How many numbers would you like?\n"))
 
-letters_length = len(letters) - 1
-numbers_length = len(numbers) - 1
-symbols_length = len(symbols) - 1
+# letters_length = len(letters) - 1
+# numbers_length = len(numbers) - 1
+# symbols_length = len(symbols) - 1
 
-password_characters = []
-
-
-# Letters
-chosen_letters_indexes = []
-
-for iteration in range(0, num_of_letters):
-    new_letter = random.randint(0, letters_length)
-    chosen_letters_indexes.append(new_letter)
-
-for index_number in chosen_letters_indexes:
-    password_characters.append(letters[index_number])
-
-random.shuffle(password_characters)
+# password_characters = []
 
 
-# Numbers
-chosen_numbers_indexes = []
+# # Letters
+# chosen_letters_indexes = []
 
-for iteration in range(0, num_of_numbers):
-    new_number = random.randint(0, numbers_length)
-    chosen_numbers_indexes.append(new_number)
+# for iteration in range(0, num_of_letters):
+#     new_letter = random.randint(0, letters_length)
+#     chosen_letters_indexes.append(new_letter)
 
-for index_number in chosen_numbers_indexes:
-    password_characters.append(numbers[index_number])
+# for index_number in chosen_letters_indexes:
+#     password_characters.append(letters[index_number])
 
-random.shuffle(password_characters)
+# random.shuffle(password_characters)
 
 
-# Symbols
-chosen_symbols_indexes = []
+# # Numbers
+# chosen_numbers_indexes = []
 
-for iteration in range(0, num_of_symbols):
-    new_symbol = random.randint(0, symbols_length)
-    chosen_symbols_indexes.append(new_symbol)
+# for iteration in range(0, num_of_numbers):
+#     new_number = random.randint(0, numbers_length)
+#     chosen_numbers_indexes.append(new_number)
 
-for index_symbol in chosen_symbols_indexes:
-    password_characters.append(symbols[index_symbol])
+# for index_number in chosen_numbers_indexes:
+#     password_characters.append(numbers[index_number])
 
-random.shuffle(password_characters)
-random.shuffle(password_characters)
+# random.shuffle(password_characters)
 
-new_password = ''.join(password_characters)
 
-print(f"Here is your password: {new_password}")
+# # Symbols
+# chosen_symbols_indexes = []
+
+# for iteration in range(0, num_of_symbols):
+#     new_symbol = random.randint(0, symbols_length)
+#     chosen_symbols_indexes.append(new_symbol)
+
+# for index_symbol in chosen_symbols_indexes:
+#     password_characters.append(symbols[index_symbol])
+
+# random.shuffle(password_characters)
+# random.shuffle(password_characters)
+
+# new_password = ''.join(password_characters)
+
+# print(f"Here is your password: {new_password}")
+
+
+
+
+# functions
+def my_function():
+    print("Hello")
+
+my_function()
