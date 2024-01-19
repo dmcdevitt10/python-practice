@@ -255,71 +255,86 @@
 
 
 # rock paper scissors
-import random
+# import random
 
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+# rock = '''
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# '''
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
+# paper = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# '''
 
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
+# scissors = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
 
-options = ["rock", "paper", "scissors"]
+# options = ["rock", "paper", "scissors"]
 
-players_choice = options[int(input("What do you choose? Type 0 for rock, 1 for paper or 2 for scissors\n"))]
+# players_choice = options[int(input("What do you choose? Type 0 for rock, 1 for paper or 2 for scissors\n"))]
 
-computers_choice = options[random.randint(0,2)]
+# computers_choice = options[random.randint(0,2)]
 
-if players_choice == "rock":
-    print(f"You chose\n{rock}")
-    if computers_choice == "rock":
-        print(f"Computer chose\n{rock}")
-        print("Draw")
-    if computers_choice == "paper":
-        print(f"Computer chose\n{paper}")
-        print("You lose")
-    if computers_choice == "scissors":
-        print(f"Computer chose\n{scissors}")
-        print("You Win")
-elif players_choice == "paper":
-    print(f"You chose\n{paper}")
-    if computers_choice == "paper":
-        print(f"Computer chose\n{paper}")
-        print("Draw")
-    if computers_choice == "scissors":
-        print(f"Computer chose\n{scissors}")
-        print("You lose")
-    if computers_choice == "rock":
-        print(f"Computer chose\n{rock}")
-        print("You Win")
-elif players_choice == "scissors":
-    print(f"You chose\n{scissors}")
-    if computers_choice == "scissors":
-        print(f"Computer chose\n{scissors}")
-        print("Draw")
-    if computers_choice == "rock":
-        print(f"Computer chose\n{rock}")
-        print("You lose")
-    if computers_choice == "paper":
-        print(f"Computer chose\n{paper}")
-        print("You Win")
+# if players_choice == "rock":
+#     print(f"You chose\n{rock}")
+#     if computers_choice == "rock":
+#         print(f"Computer chose\n{rock}")
+#         print("Draw")
+#     if computers_choice == "paper":
+#         print(f"Computer chose\n{paper}")
+#         print("You lose")
+#     if computers_choice == "scissors":
+#         print(f"Computer chose\n{scissors}")
+#         print("You Win")
+# elif players_choice == "paper":
+#     print(f"You chose\n{paper}")
+#     if computers_choice == "paper":
+#         print(f"Computer chose\n{paper}")
+#         print("Draw")
+#     if computers_choice == "scissors":
+#         print(f"Computer chose\n{scissors}")
+#         print("You lose")
+#     if computers_choice == "rock":
+#         print(f"Computer chose\n{rock}")
+#         print("You Win")
+# elif players_choice == "scissors":
+#     print(f"You chose\n{scissors}")
+#     if computers_choice == "scissors":
+#         print(f"Computer chose\n{scissors}")
+#         print("Draw")
+#     if computers_choice == "rock":
+#         print(f"Computer chose\n{rock}")
+#         print("You lose")
+#     if computers_choice == "paper":
+#         print(f"Computer chose\n{paper}")
+#         print("You Win")
+
+
+
+
+
+# for loops - finding the highest number
+numbers = [13, 78, 34, 69, 16, 62]
+
+highest_number = 0
+
+for number in numbers:
+    if number > highest_number:
+        highest_number = number
+
+print(f"The highest number is {highest_number}")
