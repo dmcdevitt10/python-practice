@@ -430,7 +430,21 @@
 
 
 # functions
-def my_function():
-    print("Hello")
+# def my_function():
+#     print("Hello")
 
-my_function()
+# my_function()
+
+
+#while loop
+number1 = 6
+
+while not number1 == 0:
+    print(number1)
+    number1 -= 1
+
+number2 = 6
+
+while number2 > 0:
+    print(number2)
+    number2 -= 1
