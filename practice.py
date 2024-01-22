@@ -455,12 +455,14 @@
 
 # Hangman
 import random
+import hangman_words
+import hangman_art
 
-word_list = ["ardvark", "baboon", "camel"]
+print(hangman_art.logo)
+
+word_list = hangman_words.word_list
 
 random_word = random.choice(word_list)
-print(f"The word is {random_word}")
-
 
 
 
@@ -470,25 +472,39 @@ display = []
 for letter in random_word:
     display.append("_")
 
-print(display)
 
+
+stages = hangman_art.stages
+
+lives = 6
 
 end_of_game = False
 
 while not end_of_game:
 
 
-    guessed_letter = input("guess a letter\n").lower()
+    guessed_letter = input("Guess a letter: ").lower()
 
 
-    for position in range(len(random_word)):
-        letter = random_word[position]
-        if guessed_letter == letter:
-            display[position] = guessed_letter
+    if guessed_letter in random_word:
+        for position in range(len(random_word)):
+            letter = random_word[position]
+            if guessed_letter == letter:
+                display[position] = guessed_letter
+    else:
+        lives -= 1
             
-    print(display)
+    print(' '.join(display))
+    if "_" in display:
+        print(stages[lives])
+
+    
+
+    if lives == 0:
+        end_of_game = True
+        print(f"Sorry, You Lose! The word was {random_word}.")
+            
 
     if "_" not in display:
         end_of_game = True
-
-print("You win")
+        print(f"\n\nCongratulations! You win! The word was {random_word}.")
