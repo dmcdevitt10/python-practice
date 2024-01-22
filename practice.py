@@ -488,23 +488,23 @@ while not end_of_game:
 
     if guessed_letter in random_word:
         for position in range(len(random_word)):
-            letter = random_word[position]
-            if guessed_letter == letter:
+            correct_letter = random_word[position]
+            if guessed_letter == correct_letter:
                 display[position] = guessed_letter
     else:
         lives -= 1
             
     print(' '.join(display))
+
     if "_" in display:
         print(stages[lives])
 
-    
+
 
     if lives == 0:
         end_of_game = True
         print(f"Sorry, You Lose! The word was {random_word}.")
             
-
     if "_" not in display:
         end_of_game = True
         print(f"\n\nCongratulations! You win! The word was {random_word}.")
