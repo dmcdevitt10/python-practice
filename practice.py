@@ -437,14 +437,32 @@
 
 
 #while loop
-number1 = 6
+# number1 = 6
 
-while not number1 == 0:
-    print(number1)
-    number1 -= 1
+# while not number1 == 0:
+#     print(number1)
+#     number1 -= 1
 
-number2 = 6
+# number2 = 6
 
-while number2 > 0:
-    print(number2)
-    number2 -= 1
+# while number2 > 0:
+#     print(number2)
+#     number2 -= 1
+
+
+
+
+
+# Hangman
+import random
+
+word_list = ["ardvark", "baboon", "camel"]
+
+random_word = random.choice(word_list)
+guessed_letter = input("guess a letter\n").lower()
+
+for letter in random_word:
+    if letter == guessed_letter:
+        print("Right")
+    else:
+        print("Wrong")
