@@ -473,7 +473,9 @@ for letter in random_word:
 print(display)
 
 
-while "_" in display:
+end_of_game = False
+
+while not end_of_game:
 
 
     guessed_letter = input("guess a letter\n").lower()
@@ -485,5 +487,8 @@ while "_" in display:
             display[position] = guessed_letter
             
     print(display)
-    
+
+    if "_" not in display:
+        end_of_game = True
+
 print("You win")
