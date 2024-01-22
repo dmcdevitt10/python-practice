@@ -536,14 +536,32 @@
 
 
 # number of cans to paint an area
-import math
+# import math
 
-def paint_calc(height, width, cover):
-  num_cans = (height * width) / cover
-  round_up_cans = math.ceil(num_cans)
-  print(f"You'll need {round_up_cans} cans of paint.")
+# def paint_calc(height, width, cover):
+#   num_cans = (height * width) / cover
+#   round_up_cans = math.ceil(num_cans)
+#   print(f"You'll need {round_up_cans} cans of paint.")
 
-test_h = int(input("Height in meters: ")) 
-test_w = int(input("Width in meters: ")) 
-coverage = 5
-paint_calc(height=test_h, width=test_w, cover=coverage)
+# test_h = int(input("Height in meters: ")) 
+# test_w = int(input("Width in meters: ")) 
+# coverage = 5
+# paint_calc(height=test_h, width=test_w, cover=coverage)
+
+
+
+
+def prime_checker(number):
+  prime = True
+  for n in range(2, number):
+    if number % n == 0:
+      prime = False
+      break
+  if prime:
+    print("It's a prime number.")
+  else:
+    print("It's not a prime number.")
+
+    
+n = int(input("Number between 1 and 100: "))
+prime_checker(number=n)
