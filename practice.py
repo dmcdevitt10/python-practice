@@ -550,18 +550,41 @@
 
 
 
-
-def prime_checker(number):
-  prime = True
-  for n in range(2, number):
-    if number % n == 0:
-      prime = False
-      break
-  if prime:
-    print("It's a prime number.")
-  else:
-    print("It's not a prime number.")
+# # prime number checker
+# def prime_checker(number):
+#   prime = True
+#   for n in range(2, number):
+#     if number % n == 0:
+#       prime = False
+#       break
+#   if prime:
+#     print("It's a prime number.")
+#   else:
+#     print("It's not a prime number.")
 
     
-n = int(input("Number between 1 and 100: "))
-prime_checker(number=n)
+# n = int(input("Number between 1 and 100: "))
+# prime_checker(number=n)
+
+
+
+
+
+#caesar cipher
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+
+def encrypt(text, shift):
+    encryption = ""
+    for letter in text:
+        old_position = alphabet.index(letter)
+        new_position = old_position + shift
+        if new_position >= len(alphabet):
+            new_position -= len(alphabet)
+        encryption += alphabet[new_position]
+    print(encryption)
+encrypt(text, shift)
