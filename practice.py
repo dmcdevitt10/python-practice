@@ -513,20 +513,37 @@
 
 
 #function arguments/parameters
-def greet(name):
-    print(f"Hello {name}")
+# def greet(name):
+#     print(f"Hello {name}")
 
-greet("greg")
+# greet("greg")
 
-# positional arguments
-def greet_with(name, location):
-    print(f"{name} lives in {location}")
+# # positional arguments
+# def greet_with(name, location):
+#     print(f"{name} lives in {location}")
 
-greet_with("Daniel", "Salt lake")
+# greet_with("Daniel", "Salt lake")
 
 
-#keyword arguments
-def greet_with(location, name):
-    print(f"{name} lives in {location}")
+# #keyword arguments
+# def greet_with(location, name):
+#     print(f"{name} lives in {location}")
 
-greet_with(name = "Daniel", location = "Salt lake")
+# greet_with(name = "Daniel", location = "Salt lake")
+
+
+
+
+
+# number of cans to paint an area
+import math
+
+def paint_calc(height, width, cover):
+  num_cans = (height * width) / cover
+  round_up_cans = math.ceil(num_cans)
+  print(f"You'll need {round_up_cans} cans of paint.")
+
+test_h = int(input("Height in meters: ")) 
+test_w = int(input("Width in meters: ")) 
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
