@@ -459,10 +459,31 @@ import random
 word_list = ["ardvark", "baboon", "camel"]
 
 random_word = random.choice(word_list)
-guessed_letter = input("guess a letter\n").lower()
+print(f"The word is {random_word}")
+
+
+
+
+
+display = []
 
 for letter in random_word:
-    if letter == guessed_letter:
-        print("Right")
-    else:
-        print("Wrong")
+    display.append("_")
+
+print(display)
+
+
+while "_" in display:
+
+
+    guessed_letter = input("guess a letter\n").lower()
+
+
+    for position in range(len(random_word)):
+        letter = random_word[position]
+        if guessed_letter == letter:
+            display[position] = guessed_letter
+            
+    print(display)
+    
+print("You win")
