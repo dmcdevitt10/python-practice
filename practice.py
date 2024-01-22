@@ -454,57 +454,79 @@
 
 
 # Hangman
-import random
-import hangman_words
-import hangman_art
+# import random
+# import hangman_words
+# import hangman_art
 
-print(hangman_art.logo)
+# print(hangman_art.logo)
 
-word_list = hangman_words.word_list
+# word_list = hangman_words.word_list
 
-random_word = random.choice(word_list)
-
-
-
-
-display = []
-
-for letter in random_word:
-    display.append("_")
+# random_word = random.choice(word_list)
 
 
 
-stages = hangman_art.stages
 
-lives = 6
+# display = []
 
-end_of_game = False
-
-while not end_of_game:
+# for letter in random_word:
+#     display.append("_")
 
 
-    guessed_letter = input("Guess a letter: ").lower()
+
+# stages = hangman_art.stages
+
+# lives = 6
+
+# end_of_game = False
+
+# while not end_of_game:
 
 
-    if guessed_letter in random_word:
-        for position in range(len(random_word)):
-            correct_letter = random_word[position]
-            if guessed_letter == correct_letter:
-                display[position] = guessed_letter
-    else:
-        lives -= 1
+#     guessed_letter = input("Guess a letter: ").lower()
+
+
+#     if guessed_letter in random_word:
+#         for position in range(len(random_word)):
+#             correct_letter = random_word[position]
+#             if guessed_letter == correct_letter:
+#                 display[position] = guessed_letter
+#     else:
+#         lives -= 1
             
-    print(' '.join(display))
+#     print(' '.join(display))
 
-    if "_" in display:
-        print(stages[lives])
+#     if "_" in display:
+#         print(stages[lives])
 
 
 
-    if lives == 0:
-        end_of_game = True
-        print(f"\n\nSorry, You Lose! The word was {random_word}.")
+#     if lives == 0:
+#         end_of_game = True
+#         print(f"\n\nSorry, You Lose! The word was {random_word}.")
             
-    if "_" not in display:
-        end_of_game = True
-        print(f"\n\nCongratulations! You win! The word was {random_word}.")
+#     if "_" not in display:
+#         end_of_game = True
+#         print(f"\n\nCongratulations! You win! The word was {random_word}.")
+
+
+
+
+#function arguments/parameters
+def greet(name):
+    print(f"Hello {name}")
+
+greet("greg")
+
+# positional arguments
+def greet_with(name, location):
+    print(f"{name} lives in {location}")
+
+greet_with("Daniel", "Salt lake")
+
+
+#keyword arguments
+def greet_with(location, name):
+    print(f"{name} lives in {location}")
+
+greet_with(name = "Daniel", location = "Salt lake")
