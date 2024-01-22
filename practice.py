@@ -503,7 +503,7 @@ while not end_of_game:
 
     if lives == 0:
         end_of_game = True
-        print(f"Sorry, You Lose! The word was {random_word}.")
+        print(f"\n\nSorry, You Lose! The word was {random_word}.")
             
     if "_" not in display:
         end_of_game = True
