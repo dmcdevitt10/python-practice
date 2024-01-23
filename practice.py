@@ -655,6 +655,11 @@
 
 
 #auction
+import auction_art
+print(auction_art.logo)
+print("Welcome to the auction!\n\n")
+
+
 bids = {}
 
 more_bidders = True
