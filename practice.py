@@ -579,12 +579,25 @@ shift = int(input("Type the shift number:\n"))
 
 
 def encrypt(text, shift):
-    encryption = ""
+    cipher_text = ""
     for letter in text:
         old_position = alphabet.index(letter)
         new_position = old_position + shift
         if new_position >= len(alphabet):
             new_position -= len(alphabet)
-        encryption += alphabet[new_position]
-    print(encryption)
-encrypt(text, shift)
+        cipher_text += alphabet[new_position]
+    print(cipher_text)
+
+def decrypt(text, shift):
+    plain_text = ""
+    for letter in text:
+        old_position = alphabet.index(letter)
+        new_position = old_position - shift
+        plain_text += alphabet[new_position]
+    print(plain_text)
+
+
+if direction == "encrypt":
+    encrypt(text, shift)
+else:
+    decrypt(text, shift)
