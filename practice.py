@@ -571,31 +571,82 @@
 
 
 #caesar cipher
-import cipher_art
-logo = cipher_art.logo
-print(logo)
+# import cipher_art
+# logo = cipher_art.logo
+# print(logo)
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
 
 
-def caesar(text, shift, direction):
-    new_text = ""
-    for letter in text:
-        old_position = alphabet.index(letter)
-        new_position = 0
-        if direction == "encode":
-            new_position = old_position + shift
-            if new_position >= len(alphabet):
-                new_position -= len(alphabet)
-            new_text += alphabet[new_position]
-        if direction == "decode":
-            new_position = old_position - shift
-            new_text += alphabet[new_position]
+# def caesar(text, shift, direction):
+#     new_text = ""
+#     for letter in text:
+#         old_position = alphabet.index(letter)
+#         new_position = 0
+#         if direction == "encode":
+#             new_position = old_position + shift
+#             if new_position >= len(alphabet):
+#                 new_position -= len(alphabet)
+#             new_text += alphabet[new_position]
+#         if direction == "decode":
+#             new_position = old_position - shift
+#             new_text += alphabet[new_position]
 
-    print(f"The {direction} text is {new_text}")
+#     print(f"The {direction} text is {new_text}")
 
-caesar(text, shift, direction)
+# caesar(text, shift, direction)
+
+
+
+
+
+#dictionaries
+# dictionary = {
+#     "bug": "an error"
+# }
+
+# dictionary["Loop"] = "doing something"
+
+# print(dictionary)
+
+
+# travel_log = {
+#     "France": {"cities_visited": ["Paris", "Lille"]},
+# }
+
+# print(travel_log["France"]["cities_visited"])
+
+
+
+# Add country to travel log
+country = input("Country: ")
+visits = int(input("Number of visits: "))
+list_of_cities = eval(input("list of cities: "))
+
+travel_log = [
+  {
+    "country": "France",
+    "visits": 12,
+    "cities": ["Paris", "Lille", "Dijon"]
+  },
+  {
+    "country": "Germany",
+    "visits": 5,
+    "cities": ["Berlin", "Hamburg", "Stuttgart"]
+  },
+]
+
+def add_new_country(country, visits, list_of_cities):
+  travel_log.append({
+    "country": country,
+    "visits": visits,
+    "cities": list_of_cities
+  })
+
+add_new_country(country, visits, list_of_cities)
+print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+print(f"My favourite city was {travel_log[2]['cities'][0]}.")
