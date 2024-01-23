@@ -578,26 +578,20 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 
-def encrypt(text, shift):
-    cipher_text = ""
+def caesar(text, shift, direction):
+    new_text = ""
     for letter in text:
         old_position = alphabet.index(letter)
-        new_position = old_position + shift
-        if new_position >= len(alphabet):
-            new_position -= len(alphabet)
-        cipher_text += alphabet[new_position]
-    print(cipher_text)
+        new_position = 0
+        if direction == "encode":
+            new_position = old_position + shift
+            if new_position >= len(alphabet):
+                new_position -= len(alphabet)
+            new_text += alphabet[new_position]
+        if direction == "decode":
+            new_position = old_position - shift
+            new_text += alphabet[new_position]
 
-def decrypt(text, shift):
-    plain_text = ""
-    for letter in text:
-        old_position = alphabet.index(letter)
-        new_position = old_position - shift
-        plain_text += alphabet[new_position]
-    print(plain_text)
+    print(f"The {direction} text is {new_text}")
 
-
-if direction == "encrypt":
-    encrypt(text, shift)
-else:
-    decrypt(text, shift)
+caesar(text, shift, direction)
