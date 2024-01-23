@@ -623,30 +623,61 @@
 
 
 # Add country to travel log
-country = input("Country: ")
-visits = int(input("Number of visits: "))
-list_of_cities = eval(input("list of cities: "))
+# country = input("Country: ")
+# visits = int(input("Number of visits: "))
+# list_of_cities = eval(input("list of cities: "))
 
-travel_log = [
-  {
-    "country": "France",
-    "visits": 12,
-    "cities": ["Paris", "Lille", "Dijon"]
-  },
-  {
-    "country": "Germany",
-    "visits": 5,
-    "cities": ["Berlin", "Hamburg", "Stuttgart"]
-  },
-]
+# travel_log = [
+#   {
+#     "country": "France",
+#     "visits": 12,
+#     "cities": ["Paris", "Lille", "Dijon"]
+#   },
+#   {
+#     "country": "Germany",
+#     "visits": 5,
+#     "cities": ["Berlin", "Hamburg", "Stuttgart"]
+#   },
+# ]
 
-def add_new_country(country, visits, list_of_cities):
-  travel_log.append({
-    "country": country,
-    "visits": visits,
-    "cities": list_of_cities
-  })
+# def add_new_country(country, visits, list_of_cities):
+#   travel_log.append({
+#     "country": country,
+#     "visits": visits,
+#     "cities": list_of_cities
+#   })
 
-add_new_country(country, visits, list_of_cities)
-print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
-print(f"My favourite city was {travel_log[2]['cities'][0]}.")
+# add_new_country(country, visits, list_of_cities)
+# print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+# print(f"My favourite city was {travel_log[2]['cities'][0]}.")
+
+
+
+
+#auction
+bids = {}
+
+more_bidders = True
+
+winner = ""
+winning_bid = 0
+
+while more_bidders:
+
+    name = input("What is your name?: ")
+    bid = input("What is your bid?: ")
+
+    bids[name] = int(bid)
+
+    other_bidders = input("Are there any other bidders?")
+
+    if other_bidders == "no":
+        more_bidders = False
+
+for bidder in bids:
+    if bids[bidder] > winning_bid:
+        winner = bidder
+        winning_bid = bids[bidder]
+
+print(bids)
+print(f"The winner is {winner} with a bid of ${winning_bid}.")
