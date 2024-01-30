@@ -200,8 +200,8 @@
 
 # states_of_america[1] = "Hawaii"
 
-# states_of_america.append("Florida")
-# states_of_america.extend(["cali", "new york"])
+# states_of_americaappend("Florida")
+# states_of_americaextend(["cali", "new york"])
 
 # print(states_of_america)
 
@@ -690,7 +690,7 @@
 
 
 
-# Functions with outputs (return)
+# # Functions with outputs (return)
 # def my_function():
 #     return "hello"
 
@@ -700,7 +700,7 @@
 
 
 
-#days in a month based off year
+# days in a month based off year
 # def is_leap(year):
 #   if year % 4 == 0:
 #     if year % 100 == 0:
@@ -729,47 +729,102 @@
 
 
 # Calculator (with recursion)
-def add(n1, n2):
-    return n1 + n2
+# def add(n1, n2):
+#     return n1 + n2
 
-def subtract(n1, n2):
-    return n1 - n2
+# def subtract(n1, n2):
+#     return n1 - n2
 
-def multiply(n1, n2):
-    return n1 * n2
+# def multiply(n1, n2):
+#     return n1 * n2
 
-def divide(n1, n2):
-    return n1 / n2
+# def divide(n1, n2):
+#     return n1 / n2
 
-operations = {
-    "+": add,
-    "-": subtract,
-    "*": multiply,
-    "/": divide
-}
+# operations = {
+#     "+": add,
+#     "-": subtract,
+#     "*": multiply,
+#     "/": divide
+# }
 
 
-def calculator():
-    number1 = float(input("What's the first number?: "))
-    for symbol in operations:
-        print(symbol)
+# def calculator():
+#     number1 = float(input("What's the first number?: "))
+#     for symbol in operations:
+#         print(symbol)
         
-    should_continue = True
+#     should_continue = True
 
-    while should_continue:
+#     while should_continue:
 
-        operation_symbol = input("Pick an operation: ")
-        number2 = float(input("What's the next number?: "))
+#         operation_symbol = input("Pick an operation: ")
+#         number2 = float(input("What's the next number?: "))
 
-        function = operations[operation_symbol]
-        answer = function(number1, number2)
+#         function = operations[operation_symbol]
+#         answer = function(number1, number2)
 
-        print(f"{number1} {operation_symbol} {number2} = {answer}")
+#         print(f"{number1} {operation_symbol} {number2} = {answer}")
 
-        if input(f"Type 'y' to continue calculation with {answer}: ") == "y":
-            number1 = answer
+#         if input(f"Type 'y' to continue calculation with {answer}: ") == "y":
+#             number1 = answer
+#         else:
+#             should_continue = False
+#             calculator()
+
+# calculator()
+
+
+
+
+
+# Higher or Lower
+import random
+import higher_lower_art
+import higher_lower_data
+
+logo = higher_lower_art.logo
+vs = higher_lower_art.vs
+data = higher_lower_data.data
+
+print(logo)
+
+game_over = False
+
+a = random.choice(data)
+data.remove(a)
+
+b = random.choice(data)
+data.remove(b)
+
+while not game_over:
+    print(f"Compare A: {a["name"]}, a {a["description"]}, from {a["country"]}.\n\n")
+    print(vs)
+    print(f"\n\nAgainst B: {b["name"]}, a {b["description"]}, from {b["country"]}.")
+    players_guess = input("Who has more followers? Type 'A' or 'B': ")
+    if players_guess == "A": 
+        if a["follower_count"] > b["follower_count"]:
+            print(a["name"], a["follower_count"])
+            print(b["name"], b["follower_count"])
+            print("you win")
+            a = b
+            b = random.choice(data)
+            data.remove(b)
         else:
-            should_continue = False
-            calculator()
-
-calculator()
+            print(b["name"], b["follower_count"])
+            print(a["name"], a["follower_count"])
+            print("you lose")
+            game_over = True
+    elif players_guess == "B": 
+        if b["follower_count"] > a["follower_count"]:
+            print(b["name"], b["follower_count"])
+            print(a["name"], a["follower_count"])
+            print("you win")
+            a = b
+            b = random.choice(data)
+            data.remove(b)
+        else:
+            print(a["name"], a["follower_count"])
+            print(b["name"], b["follower_count"])
+            print("you lose")
+            game_over = True
